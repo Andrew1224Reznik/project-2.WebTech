@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../src/index.js"],"sourcesContent":["import AOS from 'aos';\nimport 'aos/dist/aos.css';\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  AOS.init({\n    duration: 1200,\n    once: true,\n  });\n});\n"],"names":["AOS"],"mappings":"svBAGA,SAAS,iBAAiB,mBAAoB,IAAM,CAClDA,EAAI,KAAK,CACP,SAAU,KACV,KAAM,EACV,CAAG,CACH,CAAC"}
