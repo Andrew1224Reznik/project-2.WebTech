@@ -1,0 +1,182 @@
+.workers {
+  padding-top: 70px; /* Отступ сверху секции */
+  padding-bottom: 70px; /* Отступ снизу секции */
+  background: #f9fbfd; /* Светло-серый фон секции */
+}
+
+.workers-line {
+  width: 3px; /* Ширина вертикальной линии */
+  height: 90px; /* Высота линии */
+  background: #377dff; /* Синий цвет линии */
+  margin-right: 28px; /* Отступ справа от линии */
+}
+
+.workers-header {
+  display: flex; /* Горизонтальное выравнивание элементов */
+  margin-left: 20px; /* Отступ слева */
+  margin-bottom: 70px; /* Отступ снизу */
+}
+
+.workers-header-button {
+  display: flex; /* Контейнер как flex */
+  flex-direction: column; /* Элементы в колонку */
+  align-items: center; /* Центрирование по горизонтали */
+}
+
+.span-workers {
+  font-family: var(--second-family); /* Второй выбранный шрифт */
+  font-weight: 600; /* Средняя жирность */
+  font-size: 35px; /* Размер шрифта */
+  line-height: 115%; /* Межстрочный интервал */
+  letter-spacing: 0.03em; /* Межбуквенный интервал */
+  color: #377dff; /* Синий цвет */
+}
+
+.workers-title {
+  font-family: var(--second-family); /* Такой же шрифт */
+  font-weight: 600; /* Жирность */
+  font-size: 35px; /* Размер текста */
+  line-height: 115%; /* Межстрочный */
+  letter-spacing: 0.03em; /* Межбуквенный */
+  color: #141d28; /* Тёмный текст */
+  max-width: 200px; /* Ограничение ширины */
+}
+
+.workers-button {
+  display: inline-block; /* Сделать кнопку блочно-строчной */
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400; /* Нормальный вес */
+  font-size: 16px; /* Размер текста */
+  line-height: 100%; /* Межстрочный интервал */
+  color: #141d28; /* Цвет текста */
+  padding: 17px 37px; /* Внутренние отступы */
+  border: 2px solid #377dff; /* Синяя рамка */
+  border-radius: 35px; /* Скруглённые края */
+  transition: transform 500ms ease; /* Анимация при наведении */
+}
+
+.workers-button:hover {
+  background-color: #377dff; /* Синий фон при наведении */
+  color: #fff; /* Белый текст при наведении */
+  transform: scale(1.1); /* Увеличение кнопки */
+}
+
+.workers-list {
+  display: none; /* Скрытие списка карточек на мобильных */
+}
+
+/* === Планшет === */
+
+@media screen and (min-width: 768px) {
+  .workers-all {
+    display: flex; /* Ряд элементов */
+    align-items: center; /* Центрирование по вертикали */
+  }
+
+  .workers-list {
+    display: flex; /* Показать элементы как flex */
+    gap: 5px; /* Маленький промежуток между карточками */
+    width: 550px; /* Фиксированная ширина блока */
+  }
+
+  .workers-header-button {
+    margin-right: 20px; /* Отступ справа от кнопок */
+  }
+
+  .workers-bar-img {
+    position: relative; /* Для позиционирования overlay панели */
+    overflow: hidden; /* Скрыть элементы за границами */
+  }
+
+  .workers-bar-img:hover .workers-bar {
+    transform: translateY(0); /* Поднять панель при наведении */
+  }
+
+  .workers-bar {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 0; /* Привязать к низу */
+    width: 163px; /* Ширина панели */
+    height: 50px; /* Высота панели */
+    background: #377dff; /* Синий фон панели */
+    opacity: 0.9; /* Прозрачность */
+    transform: translateY(100%); /* Панель скрыта внизу */
+    transition: transform 0.3s ease; /* Анимация выезда */
+  }
+
+  .workers-soc-list {
+    display: flex; /* Иконки соцсетей в ряд */
+    gap: 8px; /* Отступ между иконками */
+    align-items: center; /* Центрирование */
+    justify-content: center; /* Центрирование по горизонтали */
+    height: 50px; /* Высота панели */
+  }
+
+  .workers-people {
+    font-family: var(--second-family); /* Шрифт */
+    font-weight: 400; /* Вес */
+    font-size: 20px; /* Размер */
+    line-height: 133%; /* Межстрочный */
+    letter-spacing: 0.04em; /* Межбуквенный */
+    color: #141d28; /* Цвет текста */
+    margin-bottom: 10px; /* Отступ */
+    margin-top: 33px; /* Отступ сверху */
+    text-align: center; /* Текст по центру */
+  }
+
+  .workers-text {
+    font-family: var(--font-family); /* Основной шрифт */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 214%;
+    letter-spacing: 0.14em;
+    color: #5c6f87; /* Серый текст */
+    text-align: center; /* Центровка */
+  }
+}
+
+/* === Декстоп === */
+
+@media screen and (min-width: 1200px) {
+  .workers {
+    padding-top: 150px; /* Больше отступ сверху */
+    padding-bottom: 145px; /* Больше отступ снизу */
+    background: #f9fbfd; /* Тот же фон */
+  }
+
+  .workers-header-button {
+    margin-right: 0px; /* Убираем лишний отступ */
+  }
+
+  .workers-line {
+    height: 100px; /* Линия выше */
+  }
+
+  .workers-header {
+    margin-left: 0px; /* Центровка */
+  }
+
+  .span-workers {
+    font-size: 40px; /* Больший размер шрифта */
+  }
+
+  .workers-title {
+    font-size: 40px; /* Увеличенный размер */
+  }
+
+  .workers-list {
+    justify-content: end; /* Прижать карточки вправо */
+    width: 920px; /* Увеличенная ширина */
+  }
+
+  .workers-bar {
+    width: 286px; /* Широкая нижняя панель */
+  }
+
+  .workers-soc-list {
+    gap: 16px; /* Больше расстояние между соц. иконками */
+  }
+
+  .workers-people {
+    font-size: 26px; /* Увеличенный размер */
+  }
+}

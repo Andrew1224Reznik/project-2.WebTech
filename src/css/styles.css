@@ -2,6 +2,7 @@
 @import url('./hero.css');
 @import url('./info.css');
 @import url('./feauters.css');
+@import url('./workers.css');
 
 p,
 h1,
@@ -35,6 +36,12 @@ body {
   --second-family: 'Montserrat', sans-serif;
   width: 100%; /* секция занимает всю ширину окна */
   height: 100vh; /* высота = 100% высоты экрана */
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding-top: 76px; /* отступ сверху для фиксированного хедера */
+  }
 }
 
 .visually-hidden {
