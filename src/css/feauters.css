@@ -1,0 +1,87 @@
+.features {
+  padding-top: 70px; /* Верхний отступ секции */
+  padding-bottom: 70px; /* Нижний отступ секции */
+  background: #233142; /* Тёмный фон блока */
+}
+
+.features-list {
+  display: flex; /* Включаем Flexbox */
+  flex-direction: column; /* На мобильных элементы идут столбцом */
+  row-gap: 45px; /* Расстояние между карточками по вертикали */
+  padding-left: 20px; /* Отступ слева для всего списка */
+}
+
+.features-icon-title {
+  display: flex; /* Иконка и заголовок в одну линию */
+  align-items: center; /* Центрирование по вертикали */
+  gap: 10px; /* Расстояние между иконкой и заголовком */
+  margin-bottom: 10px; /* Отступ снизу */
+}
+
+.features-title {
+  font-family: var(--second-family); /* Второй шрифт */
+  font-weight: 400; /* Толщина текста */
+  font-size: 20px; /* Размер текста */
+  line-height: 115%; /* Межстрочный интервал */
+  text-transform: capitalize; /* Заглавная буква у каждого слова */
+  color: #fff; /* Белый цвет текста */
+}
+
+.features-text {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400; /* Толщина текста */
+  font-size: 16px; /* Размер текста */
+  line-height: 150%; /* Межстрочный интервал */
+  color: #fff; /* Белый текст */
+  max-width: 355px; /* Ограничение ширины текста */
+}
+
+/* ===== Планшет ===== */
+@media screen and (min-width: 768px) {
+  .features-list {
+    flex-direction: row; /* Элементы в строку */
+    flex-wrap: wrap; /* Разрешаем перенос карточек на новую строку */
+    column-gap: 15px; /* Горизонтальный промежуток */
+    row-gap: 50px; /* Вертикальный промежуток */
+  }
+
+  .features-item {
+    flex-basis: calc((100% - 30px) / 2);
+    /* Две колонки: 100% минус 15px * 2 отступов, поделить на 2 */
+  }
+
+  .features-icon-title {
+    margin-bottom: 5px; /* Чуть меньше отступ */
+  }
+
+  .features-text {
+    padding-left: 60px;
+    /* Смещение текста, чтобы выстроился под заголовком */
+  }
+}
+
+/* ===== Декстоп ===== */
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 145px; /* Увеличенные отступы — больше воздуха */
+    padding-bottom: 145px;
+  }
+
+  .features-list {
+    column-gap: 40px; /* Больше расстояния между карточками */
+    row-gap: 60px; /* Вертикальный интервал тоже увеличен */
+  }
+
+  .features-item {
+    flex-basis: calc((100% - 80px) / 3);
+    /* Три колонки: 100% минус 40px * 2 отступов, поделить на 3 */
+  }
+
+  .features-icon-title {
+    margin-bottom: 18px; /* Более крупный отступ под заголовок */
+  }
+
+  .t1 {
+    max-width: 320px; /* Дополнительный класс для ограничения ширины */
+  }
+}
