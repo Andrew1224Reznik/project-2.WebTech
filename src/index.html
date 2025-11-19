@@ -2,22 +2,242 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>WebTech</title>
+
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <!-- HEADER SECTION -->
+    <header class="header-section">
+      <div class="container">
+        <nav class="header-nav">
+          <div data-aos="fade-right" data-aos-delay="1500" class="header-logo">
+            <img
+              src="/img/Frame.png"
+              alt="WebTech logo"
+              class="header-logo-icon"
+              width="50.29"
+              height="30"
+            />
+            <a href="./index.html" class="header-logo-text">WebTech</a>
+          </div>
+          <ul class="header-menu-list">
+            <li
+              data-aos="fade-down"
+              data-aos-delay="100"
+              class="header-menu-item"
+            >
+              <a href="./about.html" class="header-menu-link">Home</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="300"
+              class="header-menu-item"
+            >
+              <a href="./contact.html" class="header-menu-link">Pages</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="600"
+              class="header-menu-item"
+            >
+              <a href="./services.html" class="header-menu-link">Services</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="850"
+              class="header-menu-item"
+            >
+              <a href="./portfolio.html" class="header-menu-link">Portfolio</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="1100"
+              class="header-menu-item"
+            >
+              <a href="./blog.html" class="header-menu-link">Blog</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="1260"
+              class="header-menu-item"
+            >
+              <a
+                href="#footer-contact-us"
+                class="header-menu-link footer-link-contact-us"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <div class="header-button">
+            <svg class="button-svg" width="30" height="30">
+              <use href="./img/symbol-defs.svg#icon-th-menu"></use>
+            </svg>
+          </div>
+        </nav>
+      </div>
 
+      <div class="header-mob-menu">
+        <div class="container mob-menu-container">
+          <div class="header-mob-menu-bar">
+            <div class="menu-close">
+              <svg class="icon-menu-close" width="20" height="20">
+                <use href="/img/symbol-defs.svg#icon-cross"></use>
+              </svg>
+            </div>
+            <nav class="header-mob-menu-nav">
+              <ul class="header-mob-menu-list">
+                <li class="header-mob-menu-item">
+                  <a href="./about.html" class="header-mob-menu-link current"
+                    >Home</a
+                  >
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="./contact.html" class="header-mob-menu-link"
+                    >Pages</a
+                  >
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="./services.html" class="header-mob-menu-link"
+                    >Services</a
+                  >
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="./portfolio.html" class="header-mob-menu-link"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="./blog.html" class="header-mob-menu-link">Blog</a>
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="#footer-contact-us" class="header-mob-menu-link"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-mob-menu-soclist">
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="mob-menu-soc-icon" width="40" height="40">
+                <use href="./img/symbol-defs.svg#facebook"></use></svg
+            ></a>
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="workers-soc-icon" width="40" height="40">
+                <use href="./img/symbol-defs.svg#telegram"></use></svg
+            ></a>
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="mob-menu-soc-icon" width="40" height="40">
+                <use href="./img/symbol-defs.svg#linkedin"></use></svg
+            ></a>
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="mob-menu-soc-icon" width="40" height="40">
+                <use href="./img/symbol-defs.svg#instagram"></use></svg
+            ></a>
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="mob-menu-soc-icon" width="40" height="40">
+                <use href="./img/symbol-defs.svg#youtube"></use></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HERO SECTION -->
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <section class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-text-all">
+            <div class="number-title">01</div>
+            <div class="hero-line"></div>
+            <h1 class="hero-title">
+              The Uniqe Creative
+              <span class="hero-title-2">Design Agency</span>
+            </h1>
+          </div>
+          <p class="hero-text" data-aos="fade-left" data-aos-delay="2000">
+            Always on the lookout for the hi-tech advancements. Build not only a
+            product that can sell well, but a platform through which to deliver
+            it.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="hero-button-link backdrop-button">Start Now</a>
+            <a href="#" class="hero-button-link-2"><span>Learn More</span></a>
+          </div>
+          <div class="hero-image" data-aos="fade-up-left" data-aos-delay="1550">
+            <img
+              src="./img/businessman.png"
+              alt="hero image"
+              width="825"
+              height="810"
+            />
+          </div>
+        </div>
+      </section>
     </main>
 
-    <load src="./partials/footer.html" />
+    <!-- INFO SECTION -->
+    <section class="info">
+      <div class="container">
+        <div class="info-title-line" data-aos="fade-down">
+          <div class="info-line"></div>
+          <h2 class="info-title"><span class="span-info">How</span> we Work</h2>
+        </div>
 
-    <script type="module" src="./main.js"></script>
+        <ul class="info-list">
+          <li class="info-item" data-aos="fade-up" data-aos-delay="100">
+            <img class="info-img" src="./img/Rectangle.jpg" alt="Planning" />
+            <h3 class="info-text">Planning</h3>
+          </li>
+
+          <li class="poiner" data-aos="fade-up" data-aos-delay="150">
+            <img
+              src="./img/pointer.png"
+              alt="pointer"
+              width="156"
+              height="26"
+            />
+          </li>
+
+          <li class="info-item" data-aos="fade-up" data-aos-delay="200">
+            <img class="info-img" src="./img/Rectangle-2.jpg" alt="Design" />
+            <h3 class="info-text">Design</h3>
+          </li>
+
+          <li class="poiner2" data-aos="fade-up" data-aos-delay="250">
+            <img
+              src="./img/pointer2.png"
+              alt="pointer2"
+              width="156"
+              height="26"
+            />
+          </li>
+
+          <li class="info-item" data-aos="fade-up" data-aos-delay="300">
+            <img
+              class="info-img"
+              src="./img/Rectangle-3.jpg"
+              alt="Development"
+            />
+            <h3 class="info-text">Development</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

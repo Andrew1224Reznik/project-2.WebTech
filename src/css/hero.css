@@ -1,0 +1,210 @@
+.hero-section {
+  position: relative; /* Позволяет позиционировать дочерние элементы абсолютно внутри блока */
+  background: linear-gradient(rgba(18, 27, 38, 0.73), rgba(18, 27, 38, 0.73)),
+    /* Градиент сверху, полупрозрачный */ url(../img/bg.jpg); /* Фоновое изображение */
+  background-repeat: no-repeat; /* Изображение не повторяется */
+  background-size: cover; /* Изображение растягивается, чтобы покрыть весь блок */
+}
+
+/* Блок с изображением */
+.hero-image {
+  display: none; /* Скрываем изображение на мобильных устройствах */
+}
+
+/* Контейнер всего контента */
+.hero-container {
+  display: flex; /* Используем flexbox для упрощённого расположения дочерних элементов */
+  flex-direction: column; /* Элементы располагаются вертикально сверху вниз */
+  position: relative; /* Для абсолютного позиционирования внутренних элементов */
+}
+
+/* Большая цифра фона */
+.number-title {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 300; /* Лёгкий вес шрифта */
+  font-size: 80px; /* Размер текста */
+  line-height: 129%; /* Межстрочный интервал */
+  color: rgba(255, 255, 255, 0.13); /* Полупрозрачный белый цвет */
+}
+
+/* Вертикальная линия рядом с номером */
+.hero-line {
+  width: 3px; /* Толщина линии */
+  height: 80px; /* Высота линии */
+  background: #377dff; /* Синий цвет линии */
+}
+
+/* Контейнер с номером, линией и заголовком */
+.hero-text-all {
+  display: flex; /* Расположение элементов в ряд */
+  gap: 15px; /* Расстояние между элементами */
+  align-items: center; /* Вертикальное центрирование элементов */
+  margin-top: 70px; /* Отступ сверху */
+  margin-left: 20px; /* Отступ слева */
+}
+
+/* Основной заголовок */
+.hero-title {
+  font-family: var(--second-family); /* Второй шрифт */
+  font-weight: 200; /* Очень лёгкий шрифт */
+  font-size: 25px; /* Размер текста */
+  line-height: 140%; /* Межстрочный интервал */
+  color: #fff; /* Белый цвет */
+  max-width: 480px; /* Ограничение ширины блока */
+}
+
+/* Часть заголовка с акцентным цветом */
+.hero-title-2 {
+  font-family: var(--second-family); /* Тот же шрифт */
+  font-weight: 200; /* Лёгкий шрифт */
+  font-size: 25px; /* Размер текста */
+  color: #377dff; /* Синий цвет для акцента */
+}
+
+.hero-text {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400; /* Нормальный вес текста */
+  font-size: 12px; /* Размер шрифта */
+  line-height: 156%; /* Межстрочный интервал */
+  color: #fff; /* Белый текст */
+  margin-top: 31px; /* Отступ сверху */
+  margin-right: 20px; /* Отступ справа */
+  margin-bottom: 59px; /* Отступ снизу */
+  margin-left: 20px; /* Отступ слева */
+  max-width: 611px; /* Ограничение ширины текста */
+}
+
+.hero-buttons {
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Центрируем кнопки по горизонтали */
+  gap: 14px; /* Расстояние между кнопками */
+  margin-bottom: 70px; /* Отступ снизу */
+}
+
+/* Основная кнопка */
+.hero-button-link {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400; /* Нормальный вес текста */
+  font-size: 16px; /* Размер текста */
+  line-height: 100%; /* Высота строки */
+  color: #fff; /* Белый цвет текста */
+  border-radius: 35px; /* Скругление углов */
+  padding: 17px 37px; /* Внутренние отступы: вертикальные и горизонтальные */
+  background: #377dff; /* Синий фон */
+  transition: all 0.5s ease; /* Плавная анимация при наведении */
+}
+
+/* Вторая кнопка с прозрачным фоном */
+.hero-button-link-2 {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400; /* Нормальный вес текста */
+  font-size: 16px; /* Размер текста */
+  line-height: 100%; /* Высота строки */
+  color: #fff; /* Белый текст */
+  border: 2px solid #377dff; /* Синяя рамка */
+  border-radius: 35px; /* Скругление углов */
+  padding: 17px 37px; /* Внутренние отступы */
+  background: transparent; /* Прозрачный фон */
+  transition: all 0.5s ease; /* Плавная анимация */
+  margin-left: 14px; /* Расстояние между кнопками */
+}
+
+/* Ховер для обеих кнопок */
+.hero-button-link:hover,
+.hero-button-link-2:hover {
+  transform: scale(1.1); /* Увеличение кнопки на 10% */
+}
+
+/* Дополнительный ховер эффект для второй кнопки */
+.hero-button-link-2:hover {
+  background-color: #377dff; /* Фон становится синим */
+}
+
+/* Планшеты */
+@media screen and (min-width: 768px) {
+  .hero-text-all {
+    gap: 20px; /* Увеличиваем расстояние между элементами */
+    margin-top: 90px; /* Отступ сверху */
+    width: 450px; /* Ширина блока */
+  }
+
+  .number-title {
+    font-size: 100px; /* Увеличиваем размер цифры */
+  }
+
+  .hero-line {
+    height: 100px; /* Высота линии увеличена */
+  }
+
+  .hero-title,
+  .hero-title-2 {
+    font-size: 30px; /* Увеличиваем размер заголовка */
+  }
+
+  .hero-text {
+    margin-top: 45px; /* Отступ сверху */
+    max-width: 450px; /* Ограничение ширины */
+  }
+
+  .hero-buttons {
+    position: absolute; /* Кнопки позиционируются относительно контейнера */
+    flex-direction: column; /* Кнопки располагаются вертикально */
+    gap: 35px; /* Расстояние между кнопками */
+    align-items: center; /* Центрируем по горизонтали */
+    top: 130px; /* Смещение от верхнего края контейнера */
+    right: 60px; /* Смещение от правого края контейнера */
+    margin-bottom: 0; /* Убираем нижний отступ */
+  }
+
+  .hero-button-link-2 {
+    margin-left: 0; /* Убираем левый отступ для вертикального расположения */
+  }
+}
+
+/* Десктопы  */
+@media screen and (min-width: 1200px) {
+  .hero-text-all {
+    flex: 1 1 50%; /* Элементы занимают половину контейнера */
+    gap: 25px; /* Расстояние между элементами */
+    margin-top: 272px; /* Отступ сверху */
+    width: 800px; /* Ширина блока */
+    margin-left: 0; /* Отступ слева убран */
+  }
+
+  .number-title {
+    font-size: 140px; /* Очень большой размер цифры */
+  }
+
+  .hero-line {
+    height: 130px; /* Высота линии увеличена */
+  }
+
+  .hero-title,
+  .hero-title-2 {
+    font-size: 50px; /* Размер заголовка увеличен */
+  }
+
+  .hero-text {
+    font-size: 16px; /* Увеличиваем размер текста */
+    margin: 31px 0 59px 0; /* Сокращённая запись для margin */
+    max-width: 611px; /* Ограничение ширины текста */
+  }
+
+  .hero-image {
+    display: flex; /* Показываем изображение */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 825px; /* Ширина изображения */
+    left: 465px; /* Смещение от левого края */
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    align-items: center; /* Вертикальное центрирование */
+    flex: 1 1 45%; /* Занимает 45% ширины контейнера */
+  }
+
+  .hero-buttons {
+    position: static; /* Сбрасываем absolute */
+    flex-direction: row; /* Кнопки идут в ряд */
+    justify-content: start; /* Выравнивание влево */
+    gap: 15px; /* Расстояние между кнопками */
+    margin-bottom: 172px; /* Отступ снизу */
+  }
+}

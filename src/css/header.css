@@ -1,44 +1,164 @@
-.header {
-  padding: 20px 0;
+/* Контейнер хедера: фон, тени, внутренние отступы */
+.header-section {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15); /* Лёгкая тень снизу */
+  background: #0c1117; /* Тёмный фон хедера */
+  padding-top: 23px; /* Отступ сверху */
+  padding-bottom: 23px; /* Отступ снизу */
 }
-.nav {
-  display: flex;
-  justify-content: space-between;
+
+/* Обёртка навигации — горизонтальный flex */
+.header-nav {
+  display: flex; /* Включаем флекс-контейнер */
+  justify-content: space-between; /* Раздвигаем элементы по сторонам */
+  align-items: center; /* Вертикально центрируем элементы */
 }
-.nav-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+
+/* Логотип + текст рядом */
+.header-logo {
+  display: flex; /* Флекс, чтобы иконка и текст были в ряд */
+  align-items: center; /* Выравнивание по вертикали */
+  gap: 14px; /* Расстояние между иконкой и текстом */
 }
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+
+/* Текст логотипа */
+.header-logo-text {
+  font-family: var(--font-family); /* Семейство шрифта */
+  font-weight: 400; /* Толщина шрифта */
+  font-size: 30px; /* Размер текста */
+  line-height: 100%; /* Высота строки */
+  color: #377dff; /* Голубой цвет */
 }
-.nav-link {
-  position: relative;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+
+/* Десктопное меню скрыто на мобилках */
+.header-menu-list {
+  display: none; /* Прячем список навигации */
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+
+/* Кнопка бургер-меню */
+.header-button {
+  padding: 0; /* Убираем внутренние отступы */
+  border: none; /* Без рамки */
+  background: none; /* Прозрачный фон */
+  cursor: pointer; /* Курсор — рука */
+  fill: #377dff; /* Цвет SVG-иконки */
 }
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+
+/* Мобильное меню (выезжающий блок) */
+.header-mob-menu {
+  width: 100%; /* На всю ширину */
+  height: 100%; /* На весь экран */
+  background: #0c1117; /* Тёмный фон */
+  position: fixed; /* Фиксация поверх страницы */
+  top: 0; /* Начало сверху */
+  z-index: 1; /* Поверх других элементов */
+  padding: 20px; /* Внутренние отступы */
+  opacity: 0; /* Прозрачное по умолчанию */
+  transform: translateX(-100%); /* Сдвинуто за экран */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Анимации */
 }
-.nav-link.active::after {
-  background: #747bff;
+
+/* Открытое мобильное меню */
+.mob-menu-open {
+  opacity: 1; /* Показываем */
+  transform: translateX(0); /* Сдвигаем на экран */
+}
+
+/* Внутренний контейнер мобильного меню */
+.mob-menu-container {
+  display: flex; /* Флекс-контейнер */
+  flex-direction: column; /* Элементы сверху вниз */
+  height: 100%; /* На всю высоту экрана */
+  justify-content: space-between; /* Верхняя и нижняя части по краям */
+  padding-top: 30px; /* Отступ сверху */
+}
+
+/* Иконка "крестик" в мобильном меню */
+.icon-menu-close {
+  display: block; /* Блочный элемент */
+  margin-left: auto; /* Прижимаем вправо */
+  margin-right: 20px; /* Отступ справа */
+  margin-top: 5px; /* Отступ сверху */
+  cursor: pointer; /* Курсор — рука */
+  fill: #fff; /* Белая заливка */
+}
+
+/* Элемент списка мобильного меню */
+.header-mob-menu-item {
+  margin-bottom: 25px; /* Отступ между пунктами */
+}
+
+/* Ссылка мобильного меню */
+.header-mob-menu-link {
+  font-family: var(--font-family); /* Шрифт */
+  font-weight: 400; /* Толщина */
+  font-size: 35px; /* Крупный размер */
+  line-height: 93%; /* Высота строки */
+  letter-spacing: 0.05em; /* Небольшой трекинг */
+  color: #377dff; /* Голубой текст */
+  margin-left: 20px; /* Отступ слева */
+}
+
+/* Активная страница в мобильном меню */
+.header-mob-menu-link.current {
+  color: #fff; /* Белый текст */
+}
+
+/* Ховер и фокус для ссылок мобильного меню */
+.header-mob-menu-link:hover,
+.header-mob-menu-link:focus {
+  color: #fff; /* Белый текст при наведении */
+  transition: 500ms ease; /* Плавное изменение */
+}
+
+/* Соцсети в мобильном меню */
+.header-mob-menu-soclist {
+  display: flex; /* Горизонтальный ряд */
+  gap: 33px; /* Расстояние между иконками */
+  justify-content: center; /* Центрируем */
+}
+
+/* ------- ДЕСКТОПНАЯ ВЕРСИЯ ------- */
+@media screen and (min-width: 1200px) {
+  /* Липкий (прилипающий) хедер */
+  .header-section {
+    position: sticky; /* Фиксация при прокрутке */
+    top: 0; /* "Прилипаем" к верхнему краю */
+    z-index: 100; /* Поверх контента */
+  }
+
+  /* Навигация: элементы выравниваются по левому краю */
+  .header-nav {
+    display: flex; /* Флекс */
+    justify-content: start; /* Выравнивание слева */
+  }
+
+  /* Десктопное меню */
+  .header-menu-list {
+    display: flex; /* Показываем меню */
+    gap: 63px; /* Расстояние между ссылками */
+    margin-left: 141px; /* Отступ от логотипа */
+    align-items: center; /* Вертикальное выравнивание */
+  }
+
+  /* Ссылки в десктопном меню */
+  .header-menu-link {
+    font-family: var(--font-family); /* Шрифт */
+    font-weight: 400; /* Толщина */
+    font-size: 15px; /* Размер */
+    line-height: 93%; /* Высота строки */
+    letter-spacing: 0.05em; /* Межбуквенный интервал */
+    color: #fff; /* Белый текст */
+  }
+
+  /* Ховер для десктопных ссылок */
+  .header-menu-link:hover,
+  .header-menu-link:focus {
+    color: #377dff; /* Голубой цвет при наведении */
+    transition: 300ms ease; /* Плавное изменение цвета */
+  }
+
+  /* Убираем бургер на десктопе */
+  .header-button {
+    display: none; /* Прячем кнопку */
+  }
 }

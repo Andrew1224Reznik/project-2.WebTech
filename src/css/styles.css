@@ -1,18 +1,69 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
-
-/* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('./hero.css');
+@import url('./info.css');
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0; /* убираем отступы у заголовков и параграфов */
+}
+
+ul {
+  list-style-type: none; /* убираем точки списка */
+  margin: 0; /* убираем отступы у списка */
+  padding: 0; /* убираем отступы у списка */
+}
+
+a {
+  text-decoration: none; /* убираем подчеркивание ссылок */
+}
+
+img {
+  display: block; /*убираем пробелы под картинкой*/
+  max-width: 100%; /*максимальная ширина картинки*/
+  height: auto; /*автоматическая высота картинки*/
+}
+
+li:last-child {
+  margin-right: 0; /*убираем отступ у последнего элемента списка*/
+}
+
+body {
+  --font-family: 'Poppins', sans-serif;
+  --second-family: 'Montserrat', sans-serif;
+  width: 100%; /* секция занимает всю ширину окна */
+  height: 100vh; /* высота = 100% высоты экрана */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container {
+  width: 420px; /*ширина контейнера*/
+  padding-left: 10px; /*отступ слева*/
+  padding-right: 10px; /*отступ справа*/
+  margin: 0 auto; /*центрируем контейнер*/
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    min-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

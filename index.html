@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebTech</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/Project-2.WebTech/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/Project-2.WebTech/assets/index-DZt516E9.css">
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header class="header-section">
+      <div class="container">
+        <nav class="header-nav">
+          <div data-aos="fade-right" data-aos-delay="1500" class="header-logo">
+            <img
+              src="data:image/png;base64,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"
+              alt="WebTech logo"
+              class="header-logo-icon"
+              width="50.29"
+              height="30"
+            />
+            <a href="./index.html" class="header-logo-text">WebTech</a>
+          </div>
+          <ul class="header-menu-list">
+            <li
+              data-aos="fade-down"
+              data-aos-delay="100"
+              class="header-menu-item"
+            >
+              <a href="./about.html" class="header-menu-link">Home</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="300"
+              class="header-menu-item"
+            >
+              <a href="./contact.html" class="header-menu-link">Pages</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="600"
+              class="header-menu-item"
+            >
+              <a href="./services.html" class="header-menu-link">Services</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="850"
+              class="header-menu-item"
+            >
+              <a href="./portfolio.html" class="header-menu-link">Portfolio</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="1100"
+              class="header-menu-item"
+            >
+              <a href="./blog.html" class="header-menu-link">Blog</a>
+            </li>
+            <li
+              data-aos="fade-down"
+              data-aos-delay="1260"
+              class="header-menu-item"
+            >
+              <a
+                href="#footer-contact-us"
+                class="header-menu-link footer-link-contact-us"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <div class="header-button">
+            <svg class="button-svg" width="30" height="30">
+              <use href="/Project-2.WebTech/assets/symbol-defs-B8MlsfrJ.svg#icon-th-menu"></use>
+            </svg>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header-mob-menu">
+        <div class="container mob-menu-container">
+          <div class="header-mob-menu-bar">
+            <div class="menu-close">
+              <svg class="icon-menu-close" width="20" height="20">
+                <use href="/Project-2.WebTech/assets/symbol-defs-B8MlsfrJ.svg#icon-cross"></use>
+              </svg>
+            </div>
+            <nav class="header-mob-menu-nav">
+              <ul class="header-mob-menu-list">
+                <li class="header-mob-menu-item">
+                  <a href="./about.html" class="header-mob-menu-link current"
+                    >Home</a
+                  >
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="./contact.html" class="header-mob-menu-link"
+                    >Pages</a
+                  >
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="./services.html" class="header-mob-menu-link"
+                    >Services</a
+                  >
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="./portfolio.html" class="header-mob-menu-link"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="./blog.html" class="header-mob-menu-link">Blog</a>
+                </li>
+                <li class="header-mob-menu-item">
+                  <a href="#footer-contact-us" class="header-mob-menu-link"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-mob-menu-soclist">
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="mob-menu-soc-icon" width="40" height="40">
+                <use href="/Project-2.WebTech/assets/symbol-defs-B8MlsfrJ.svg#facebook"></use></svg
+            ></a>
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="workers-soc-icon" width="40" height="40">
+                <use href="/Project-2.WebTech/assets/symbol-defs-B8MlsfrJ.svg#telegram"></use></svg
+            ></a>
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="mob-menu-soc-icon" width="40" height="40">
+                <use href="/Project-2.WebTech/assets/symbol-defs-B8MlsfrJ.svg#linkedin"></use></svg
+            ></a>
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="mob-menu-soc-icon" width="40" height="40">
+                <use href="/Project-2.WebTech/assets/symbol-defs-B8MlsfrJ.svg#instagram"></use></svg
+            ></a>
+            <a href="#" class="header-mob-menu-soclink"
+              ><svg class="mob-menu-soc-icon" width="40" height="40">
+                <use href="/Project-2.WebTech/assets/symbol-defs-B8MlsfrJ.svg#youtube"></use></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HERO SECTION -->
+    <main>
+      <section class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-text-all">
+            <div class="number-title">01</div>
+            <div class="hero-line"></div>
+            <h1 class="hero-title">
+              The Uniqe Creative
+              <span class="hero-title-2">Design Agency</span>
+            </h1>
+          </div>
+          <p class="hero-text" data-aos="fade-left" data-aos-delay="2000">
+            Always on the lookout for the hi-tech advancements. Build not only a
+            product that can sell well, but a platform through which to deliver
+            it.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="hero-button-link backdrop-button">Start Now</a>
+            <a href="#" class="hero-button-link-2"><span>Learn More</span></a>
+          </div>
+          <div class="hero-image" data-aos="fade-up-left" data-aos-delay="1550">
+            <img
+              src="/Project-2.WebTech/assets/businessman-BHxNlEIt.png"
+              alt="hero image"
+              width="825"
+              height="810"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- INFO SECTION -->
+    <section class="info">
+      <div class="container">
+        <div class="info-title-line" data-aos="fade-down">
+          <div class="info-line"></div>
+          <h2 class="info-title"><span class="span-info">How</span> we Work</h2>
+        </div>
+
+        <ul class="info-list">
+          <li class="info-item" data-aos="fade-up" data-aos-delay="100">
+            <img class="info-img" src="/Project-2.WebTech/assets/Rectangle-C2hoimtW.jpg" alt="Planning" />
+            <h3 class="info-text">Planning</h3>
+          </li>
+
+          <li class="poiner" data-aos="fade-up" data-aos-delay="150">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJwAAAAaCAYAAABCUTWIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAidSURBVHgB7VtZcxTXFT536WVGs6BlkECyrAwCY61QUzAlG7umIIHCRZSkUnrIQx7ywk/IM/8gb64KDylXHkNVkoLYDgmkJjYgZDKYRSOTGCQZJLSMJTSarZe75PbA2AIkFhfGCPqrmume6b5973Sf+51zvnsGgQ8f3x9wInGYVJruhLWlcj9CwkHgw8ezBUqlUgSggzrOcnOJ23GJoR8JEQEs/k7Bh49nA8VmCcVm8XC+UHgDsVwENKiThOtESEtIbEgkJ32D8/FdgQGGUCIxjs3WfrO8OB+XnLWYxeIGwUAY2B51RNClUiQEwDWEZNBCZsV3qT6eBqi7u1uLx+N0vqA1lCvFZillu470mCSyIiW6YQhxc2Tkt7PJ5O8aXWDvCYQnNMxKXJDixfO7vvQZzscTI5UaqivYlcFbOScowVmmhM4C4+MGRp8Z+uv5dPr9indeIsW32hW8V0h5tazLa2EHvwsOGQY4wj2D81hOgg8fj8G2bfX2+S8q10JcTuXz00tZ05SQySiPCd5Lqow0CNpUr7DwTo2wCxfOnbzYP3AgIQguXMbTOe8cL6MIpaemXIhGhWrM7zX24WMtqAz0roF9883QENmRc8PIcfZRgc0yDXyaPdM9NbD3k012OZjS6vCpkdPH5702pL61q29T3cbdLSTQ2R5/05pGjgVLO9SxSd/wfKyGld4QezHdJm70IVcOIIkWN8fwP8+c+stCZ+eUjrTmn6jUopD5ZGYUYMYjM6AMbbgRQJVll4ntjsP39bZsZ3qz/lU4kLqQzuUcyGYZ+Kzn436o7DRBuRZrBU7fxpKVmUszmpweP3Ei46rjOBLb8pra1iM7eBIgw75p+O2rm6ZSW4Mll7daku/SAQUZlxWdwOd3eP343v66ytGjR13w8SpDGdrvqTA/jIFkA0jIBirIqLXBuXLlH2+phOGIR0womRzcaAP/GaXk3/85e/xLWEFYq8kiGDo7tYNbk8b08lI/cnkXxgQLKk9fPvPRdfDZ7lVEVdS169paqGX1IYzbOcGjASYut7eHSseOHeO1Ezs7O41obNsvOciyu3zzo2w266y80ON0ONLR0aE1dvSGODSyS+kPlmF1g6tdx892Xy5UDU1EX98M5UqXkKiJYDSPjEgmDDNL6XSaPXA+6XlnsJu6fKde1/i3z07/cREesImnEX7Xkk9QX9/+oKYZgczC1SJMdqhBpDn4xrfegVOp9zbmHbwHMdEoiJwLIn5O151FZWirPV+U3KdcqcV+qtxh+uLw8XFYhZyeRvhd04A8YxOGTO1sfjMimvFEiA7+d3r6F4uTjb/hkAFfalk/wPe2Vdljtmy4AepOa0F5nhXm585lqsH/qqQzODgYurUoDmABUxeXb9yENZ75M1raknjPnkPRCthhxs0W9blHjRypHqc0zCdDWnwaYIypmVHz5xJ8BnwRUE0YlRaLbdvWLFS/EdvcyWROzsFdg1HHh9SjPHa/7vYwSDL58x02cnvqSPOfz579Q+FRHT4r1K5FhoaGtFwuRxZ5aJvitzgGEVIjLlCKxoSjVQJRbXn45FgRIOuxHwcfzxPKgI5AdzfQhoaRqGKAmOtAhCCIMUCtAsmRy8MfX4Gney4qe/1xhNKgOTJy3FtRWNOjfd+L90qVTuDuobiBp6w2DLwTI16PBF7iCEmd8YkLF05eg4d/HIFEAvsrH88EVRbzgn/LshCNNMcwNaLchS1UwiaJUQEBWkRIux5v1W4ronDXiNGepB94XLvnWS1SzXgyCwukZ0tfVCu72yVC+d09bdkH9D2y6+0D2x2GW02DTDA9MJ859bmVSERF5u66nc+IjwdSE5Z25vO4oaE3hE1no+OIToGwqea5IjGtyIVdMoHPFYu3vzLVmmjmOU3uH6o8SfXrVYXG5CrxAU6+e2iLzUSXEFIQROqRdC0hiS0C6IZD9Jn68mx5OJcTcF2t/0KmNhv9mPBbkJ27D+2WmG2TmHB1s+9IyRky8FzQMW7n879aymbfV/cuXVt4f254UevhMHT/ie5vPaFVKl8Hy5IGJIiY5GgDQug1KR0hJeYM5HRIJ3MmLt1SbqAEL6/R1VaEwAvwY7EYHh+vp4kEuGus/uDEnqE217IDJOAuxgJN5YWFMSezorIDfiCshwLM2hi9YJcMDGRJWxuQW7lCU4mRRir4Vg5k9Mq5D7+A+90tOnz4MD16NKN2w+oGp2s3WcKLy4g1WcLLDsGrpt28ebP2tWOaTpkbgHgTs5kSX6WhYuAmaorhzL8+noC1xfiadvrC/Nb1XPHrjd2rViDZbEysIjaT/oGDfVhCCxdgE01bZgLZiIsicc2i40Almx1zVLYGXgzjNchU3zLePlujv5Xit3zEuFZuV3yfQo8QxXFPcl/MJGbMlUJTw9eI5M1e3IVVSMEJDSidiWKJLBVo3NSDdLY9RubVspIL64jZX+YSc9zz1sEf6RJtZVJqlPCgUMEyqIepjJALjFTSLFyMZEixhYtAKK+NHZW1zSR7Xxt9wFWh/ft/Hcznb9Uz1sAJkQ6PUNaI88xxosi2p3g4HMYLCx0yHJ4JViqIMJ1ijZQN28EqSichinhISqSLknb10qW/5uFhIyHJdw6+4bq0R0i3WO0UEUcgthyhkQnGpooqgxSGYchstos/gTb2QuJlLjEXo+eUu0kkbibUB6tgoWwWIHlwhykqThAXF4OchEwG3MQgTTXzAq7KUDRGVnNPeL641IVJ3U4mS4IhwmXBKswSApIpVQGiUMoDweQ2XrLcICCMgPElbssylhgTEJokQAUCaelobI3x8pFPk/9ra8tONDffrjLsXcaNi4eNKwvrFa/qn2hWur17+6l722qs9yB7oO5Uqk7PBwIORURZpSAVIl3dUdakHJ9LFV/aUnMwwTgsLWzJegPZd+6UXLYhgoyCJTRtQS4s9IrJyQ8ceIW1xf8D4dgUlHHbm3sAAAAASUVORK5CYII="
+              alt="pointer"
+              width="156"
+              height="26"
+            />
+          </li>
+
+          <li class="info-item" data-aos="fade-up" data-aos-delay="200">
+            <img class="info-img" src="/Project-2.WebTech/assets/Rectangle-2-CT2I0Wp0.jpg" alt="Design" />
+            <h3 class="info-text">Design</h3>
+          </li>
+
+          <li class="poiner2" data-aos="fade-up" data-aos-delay="250">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJwAAAAaCAYAAABCUTWIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAi3SURBVHgB7ZvtU1PZHcd/55z7lJCQAAJGUSCgjqayaqaAdumkuzN1WZcXtpMX7b7xFb7yTf8C/4PO9KWvnOls32Ta2nV068Nu05aCuka2auiuIiqCuokEQsjDfTjn9FwgVhBwu0UqeD8zl0ty7z0595xvfk/nBsHbB5rfYOE+Mv9vnIk/bNE1eM/Bw36/l0vmpIRl2WKEEJ4hHqJQoAYBUk0pKpVKXFEkXMCmmfOATuRpLt2T+dat23guN8waGhpoLBYz4C0GwcbFFhEJh3Oz9yjEIPZRqGxIeqxitoJZboVZRQ9SuMQp8QBhMjcJQpVmcvDSpafwgui6u7vVdIb0GNjyAecIAy4iTnQKjANwhBDDhGBELeTGmGEG4ignaWDiOLcQKMTN7eso+TZx9VyfaNJcqr/RaFROp9M4Hs9RCIt3El6+zBdg3bJhBdcUiWh+Q9vLOa5HwCWgWJYwm2GMaICpxQEjLgNFBvVygouYcVs9FtXg1s34Z49h4SSj9vePViNacuWLslmw1FIlTSOXS9enpxuIplUxr/cOy0m1qlufUSYVGWMqycQAocMsMSzJL0vIXWJ4Jtl//rZoz1rc356eHvf4hNUp+lAtPngaUdFnBAXEUcrn8ozGH4SsUMVJltTCHBIJKi7h89u6Yr0Kbs4thsMkJCxXMpm0J3CBQDo6ur0UkQPCwrgtzKYYRyWhuqJB8YxkGjnGtpmyPGTYlk/TtOcTl5ibTLbMZ5bh86/5K877T1+FdZ0jxpa6rre3V75xY3wbl6UKTpBiskIF4XK9MJYG5hhzYHYnhf74M8rwI3eFkrr2+R8zsM5E96YL7nmMFYlEsMvlIqlUirjr6ir0nFalm8ZW4bOqDY8a//qlwY+SaBTIyMgITySCYpJj5QNlMb1pE4VgUXwp7lkCqJUoBVcJGRqy9AadzlpovzB/XGnwXBiIxYortGXzRrnjN1Fw9kATsReD7deKhKkFyqtQifowIgFGzRoivvUUSEEC5YHFaeZnH4YfnTx50oKNS3meMEAYRyJeouu1aGAgpsMSgmo6dkzb/HW6OYvVglpgWb9/qhSPx23LvZz1XjP+X4LDtjuEJdxXONwrc228kzIuBMY1RplLjHKBEZzDgL7BbmMq++BBSVVVnkzuEdfHOGygoHo1aO3+uNIzkXkPEagWsaoYN54TLtnUVOVh2uVNDX/2iW0Vy8nImlr6tRLcbMYYCqWxrh9H/vrLTZQZDeBR/jV46dMFGaHI1JT7j4qHdGzplUh5mMv5spTeMJN2nLV8fOWwEDHeYamnZ4ucySB/gRuN4q2tIoFCHEQuzWGSy7xQQd0P+vvvTAm3LcY0Xk5EXnfHXmPb4bBkB/U+305/AYqNnKEgnrvpaYwJlahy/dq1JQJfO3aJ2/+szSBscOw5xhAKkUjtHmXCytSJDHqTSNF3iFjQjQyW4RJ+6sb0bn9qJAvDw3ad8PuMuXBErzYGqym42UA1LFxlMBiURtKlClqk+xFnm8QNqZyihy6XfL9Q1K1ql2cqlxvRRUZox12OoNYWe55IJBLVdL3osyy9VkfYKwqJ20RJUfbU+D7tO/c7YfX+q3nBBw++F1BVNiFixdJKJ0rwvyOC/GNqHlJ+VIBKi6DmkfGZoEn5pDBPYx6v8oWPlGYmJn5uXIkfX7f1ow2EPfZWPB6bEfu82OyQRiQi0cEiY4HWWqXYN3fei1kzXalBkeQpWcPVlS9Y4+Jl/0rnr4KFi5K2Q4XdCocOnfKirEq33dzzaHLyn/lkcu1iA4dVwXaLZYNADnQe3WnJpktWXfcSl2O2OJerBKDwoe4gY/ChpChnvvzbn8ZgmTn/roJ7sSOL4Dgc/km1pgX1qamruijClgN7R2TrG9LWefgdEWu3AaKSqDgnB/t/+hXAr+wYbykLRtoPfdQuFvKCLVt2/CEW+/VS9cEVBWfHY1I2m8WBQFv17t2bnp06dcpc7lxwBLYREWvRvSrFYztBQjuAcpkq1je3+j4YEsJ7qQZ44sQJ9e9f3fuAWaDfHDj/OSyxZvzyMowQWdPEBAkEflBTAKtdrEHWExlPohI6m0icLYDD2wgJ9/So5hMWJArfL6oNWJH4wJ7WutHTp0/bFq8sPLGk+Is6g2Q/tjg5f2vg7B1YJMq5lDkaReGRkup2WxUzJd7GMewiotbPGXnq8pIrFciXvXjxt0VwamBvOyJ86tWwOrbToOgAJlAgGK5d7zv3CObiu9nYb19XdyeyoEVh1WeuXv1k+sUG7Kcgakr5QqME6m4GplvUyYqywm5MPLl7b66anzTBcZcOC8Gw5aS2r/HLfaKquksUlEddyLjV33/xGcwZJXV/55HDQLA5+I+PLgMcf+5aSd321n2EsmaL8ZRHki/mp+/fHLzen85kMmY6nabg4PAyHHJx8+nY3Sf1LaERTKHRQmhvTfNOI/XwblYcNxtbW/PMYoe2NA0/fjJ657mVEzW0qCedHjLml45McHBYHrtasVRdTmlvP9qkE+NdTKxRI1B5JRmLld7pONJFMFVaGrx/KT/pXC7sOS7T4VXg0A+jdYparKfTVcM35SFDGKjygxP2hru6umtyFvwIEPfLCv5z596Wyb7E/R5Vka5fiZ8Ztc/byI+YO6wuuLPzyC4dWESYqLzFWJYQ9BgRNY+JO+WFJzNiWUtYsd/I+zrOv88R3k6pfA5J4JdpsfHGtYsXRBsmAQeH7wYfG7s7qUnWzU3++hEgxjTncg03YBcwY3+R4kD99r0kuGdIv/7XC0ObNwdBklgEcbjDZeRt3NL+7fj4LcOxcA7fl9lHzsRyOQl3tVVbvNAiarZ+jKCKI+upjtFtj8WbDS41gEQei8SC+NTcVUdwDquB/ZsNkVAMSh0/bt5ugBxABvZxzhSOmP3TsyrAeCpP+e8dwTmsNrOPP7175Jfe/LPJAMc4hBjbzRDKYUa/cATn8LqYrYAcPBhV8zS7mREpRACn/g1kFAHNPQvE4wAAAABJRU5ErkJggg=="
+              alt="pointer2"
+              width="156"
+              height="26"
+            />
+          </li>
+
+          <li class="info-item" data-aos="fade-up" data-aos-delay="300">
+            <img
+              class="info-img"
+              src="/Project-2.WebTech/assets/Rectangle-3-CDoyFIYU.jpg"
+              alt="Development"
+            />
+            <h3 class="info-text">Development</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
