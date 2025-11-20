@@ -1,0 +1,123 @@
+.few-reason {
+  padding-top: 70px; /* Внутренний отступ сверху — расстояние до контента */
+  padding-bottom: 70px; /* Внутренний отступ снизу */
+  margin: 0 auto; /* Центрирование блока по горизонтали (если есть фиксированная ширина) */
+  background: linear-gradient(
+      rgba(246, 246, 246, 0.9),
+      rgba(246, 246, 246, 0.9)
+    ),
+    /* Светлый полупрозрачный градиент поверх картинки */
+      url(../img/few-reason-bg.jpg); /* Фоновое изображение секции */
+  background-repeat: no-repeat; /* Запрещаем повторение фоновой картинки */
+  background-position: center; /* Выравниваем фон по центру */
+  background-size: cover; /* Картинка растягивается, чтобы покрывать весь блок */
+}
+
+.few-reason-header {
+  display: flex; /* Выстраиваем элементы в строку */
+  align-items: center; /* Центрируем по вертикали */
+  gap: 28px; /* Расстояние между элементами */
+}
+
+.few-reason-line {
+  height: 85px; /* Высота декоративной линии */
+}
+
+.few-reason-title {
+  font-family: var(--second-family); /* Второй шрифт */
+  font-weight: 400; /* Нормальная толщина */
+  font-size: 34px; /* Размер текста */
+  line-height: 115%; /* Межстрочный интервал */
+  letter-spacing: 0.03em; /* Маленький отступ между буквами */
+  color: #233142; /* Цвет заголовка */
+}
+
+.span-few-reason {
+  font-family: var(--second-family); /* Тот же шрифт */
+  font-weight: 600; /* Чуть жирнее — акцент */
+  font-size: 34px; /* Размер текста */
+  line-height: 115%; /* Межстрочный интервал */
+  letter-spacing: 0.03em; /* Интервал между буквами */
+  color: #377dff; /* Акцентный синий цвет */
+}
+
+.few-reason-subtitle-01 {
+  font-family: var(--second-family); /* Второй шрифт */
+  font-weight: 400; /* Вес текста */
+  font-size: 44px; /* Большой размер подзаголовка */
+  line-height: 91%; /* Более плотное расстояние */
+  letter-spacing: 0.02em; /* Лёгкое разрежение */
+  color: #377dff; /* Синий оттенок */
+  padding-top: 70px; /* Отступ сверху */
+  padding-bottom: 20px; /* Отступ снизу */
+}
+
+.few-reason-subtitle {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 45px; /* Чуть больше, чем предыдущий */
+  line-height: 89%; /* Плотный текст */
+  letter-spacing: 0.02em;
+  color: #657991; /* Серо-синий цвет */
+  padding-bottom: 20px; /* Расстояние снизу */
+}
+
+.few-reason-text-title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px; /* Небольшой текст */
+  line-height: 187%; /* Большой межстрочный интервал — хорошо читается */
+  letter-spacing: 0.06em; /* Разрежение */
+  color: #233142;
+  padding-bottom: 20px; /* Отступ снизу */
+}
+
+.few-reason-text {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187%; /* Высокий интервал для комфортного чтения */
+  color: #5c6f87; /* Нейтральный серо-голубой */
+  max-width: 567px; /* Ограничиваем ширину текста */
+  padding-bottom: 30px; /* Отступ снизу */
+}
+
+.few-reason-text:last-child {
+  padding-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .few-reason {
+    padding-top: 150px; /* Увеличиваем отступ сверху на десктопе */
+    padding-bottom: 146px; /* Увеличиваем нижний отступ */
+  }
+
+  .few-reason-line {
+    height: 92px; /* Линия выше на больших экранах */
+  }
+
+  .few-reason-title {
+    font-size: 40px; /* Крупнее заголовок */
+  }
+
+  .span-few-reason {
+    font-size: 40px; /* Крупнее акцент */
+  }
+
+  .few-reason-subtitle-01 {
+    padding-top: 84px; /* Больше пространство */
+    padding-bottom: 35px; /* Больше отступ снизу */
+  }
+
+  .few-reason-subtitle {
+    padding-bottom: 35px;
+  }
+
+  .few-reason-text-title {
+    padding-bottom: 28px;
+  }
+
+  .few-reason-text {
+    padding-bottom: 46px;
+  }
+}

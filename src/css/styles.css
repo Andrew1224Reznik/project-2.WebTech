@@ -3,6 +3,11 @@
 @import url('./info.css');
 @import url('./feauters.css');
 @import url('./workers.css');
+@import url('./few-reason.css');
+@import url('./gallery.css');
+@import url('./testimonials.css');
+@import url('./innovation.css');
+@import url('./our-news.css');
 
 p,
 h1,
@@ -45,14 +50,19 @@ body {
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+  position: absolute; /* Убираем элемент из обычного потока страницы */
+  width: 1px; /* Минимизируем ширину — почти невидимый размер */
+  height: 1px; /* Минимизируем высоту по той же причине */
+  margin: -1px; /* Сдвигаем элемент за пределы экрана */
+  padding: 0; /* Убираем внутренние отступы — чистый блок */
+  overflow: hidden; /* Скрываем всё содержимое, выходящее за границы */
+  clip: rect(
+    0,
+    0,
+    0,
+    0
+  ); /* Обрезаем область отображения до нуля (старый метод) */
+  border: 0; /* Убираем рамку, чтобы ничего не отображалось */
 }
 
 .container {

@@ -7,3 +7,5 @@ document.addEventListener('DOMContentLoaded', () => {
     once: true,
   });
 });
+
+import './js/testimonials.js';

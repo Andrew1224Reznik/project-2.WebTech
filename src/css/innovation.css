@@ -1,0 +1,180 @@
+.innovation {
+  display: flex; /* Используем flex для размещения изображения и текста */
+  background: #233142; /* Тёмно-синий фон секции */
+  padding-top: 70px; /* Верхний отступ для мобильной версии */
+  padding-bottom: 70px; /* Нижний отступ */
+  overflow: hidden; /* Обрезаем всё, что выходит за границы секции */
+}
+
+.innovation-img {
+  display: none; /* На мобильных картинка скрыта */
+}
+
+.innovation-title {
+  text-align: center; /* Центрируем заголовок */
+  font-family: var(--second-family); /* Второй шрифт проекта */
+  font-weight: 600; /* Жирность текста */
+  font-size: 50px; /* Размер текста заголовка */
+  line-height: 115%; /* Межстрочный интервал */
+  letter-spacing: 0.01em; /* Расстояние между буквами */
+  color: #fff; /* Цвет текста — белый */
+}
+
+.innovation-title-2 {
+  text-align: center; /* Центрируем второй ряд заголовка */
+  font-family: var(--second-family); /* Второй шрифт */
+  font-weight: 500; /* Жирность */
+  font-size: 55px; /* Размер текста */
+  line-height: 125%; /* Межстрочный интервал */
+  letter-spacing: 0.02em; /* Межбуквенный интервал */
+  color: #377dff; /* Акцентный синий цвет */
+  margin-bottom: 25px; /* Отступ снизу */
+}
+
+.innovation-text {
+  text-align: center; /* Центрируем текст */
+  font-family: var(--second-family); /* Тот же шрифт */
+  font-weight: 400; /* Обычная жирность */
+  font-size: 15px; /* Размер текста */
+  line-height: 150%; /* Межстрочный интервал */
+  letter-spacing: 0.05em; /* Чуть увеличенный интервал */
+  color: #fff; /* Белый цвет текста */
+  margin-bottom: 67px; /* Отступ снизу перед кнопками */
+}
+
+.innovation-buttons {
+  display: flex; /* Кнопки выстраиваются в ряд */
+  justify-content: center; /* Центровка кнопок по горизонтали */
+}
+
+.innovation-button-link {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400; /* Жирность */
+  font-size: 16px; /* Размер текста */
+  line-height: 100%; /* Высота строки */
+  color: #fff; /* Цвет текста — белый */
+  border-radius: 35px; /* Скругление кнопки */
+  padding: 17px 37px; /* Внутренние отступы */
+  background: #377dff; /* Синий фон */
+  transition: all 500ms ease; /* Плавная анимация */
+}
+
+.innovation-button-link:hover,
+.innovation-button-link-2:hover {
+  transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+.innovation-button-link-2:hover {
+  background-color: #377dff; /* При наведении меняем фон на синий */
+}
+
+.innovation-button-link-2 {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400; /* Жирность */
+  font-size: 16px; /* Размер */
+  line-height: 100%; /* Межстрочный интервал */
+  color: #fff; /* Белый текст */
+  border: 2px solid #377dff; /* Синяя рамка */
+  border-radius: 35px; /* Скругление */
+  padding: 17px 37px; /* Отступы */
+  background: transparent; /* Прозрачный фон */
+  margin-left: 14px; /* Отступ слева между кнопками */
+  transition: all 500ms ease; /* Плавная анимация */
+}
+
+/* ---------------- TABLET (от 768px) ---------------- */
+@media screen and (min-width: 768px) {
+  .innovation-container {
+    position: relative; /* Позволяет позиционировать кнопки абсолютно */
+  }
+
+  .innovation-title {
+    text-align: left; /* Выравниваем заголовок по левому краю */
+  }
+
+  .innovation-title-2 {
+    text-align: left; /* Выравниваем второй ряд заголовка по левому краю */
+  }
+
+  .innovation-text {
+    text-align: left; /* Центрируем заголовок */
+    width: 450px; /* Увеличиваем ширину текста */
+    margin-bottom: 0px; /* Убираем лишний отступ */
+  }
+
+  .innovation-buttons {
+    position: absolute; /* Размещаем кнопки поверх блока */
+    display: flex; /* Flex */
+    flex-direction: column; /* Выстраиваем кнопки в колонку */
+    gap: 35px; /* Расстояние между кнопками */
+    align-items: center; /* Центрирование кнопок */
+    margin-bottom: 70px; /* Отступ снизу (на случай адаптации) */
+    top: 28px; /* Позиция сверху */
+    right: 70px; /* Позиция справа */
+  }
+
+  .innovation-button-link-2 {
+    margin-left: 0px; /* Убираем отступ, т.к. кнопки в колонке */
+  }
+}
+
+/* ---------------- DESKTOP (от 1200px) ---------------- */
+@media screen and (min-width: 1200px) {
+  .innovation {
+    display: flex; /* Флекс-раскладка */
+    background: #233142; /* Повтор цвета (можно убрать) */
+    width: 100%; /* Полная ширина */
+    height: 653px; /* Фиксированная высота */
+    overflow: hidden; /* Скрываем лишнее */
+    padding-top: 0px; /* Убираем мобильные отступы */
+    padding-bottom: 0px; /* То же */
+  }
+
+  .innovation-container {
+    position: static; /* Сбрасываем абсолютную систему */
+    display: flex; /* Контейнер в строку */
+    width: 100%; /* Полная ширина */
+    max-width: 1440px; /* Максимальная ширина секции */
+    margin: 0 auto; /* Центровка */
+  }
+
+  .innovation-title {
+    font-size: 70px; /* Крупнее заголовок */
+  }
+
+  .innovation-img {
+    display: block; /* Показываем картинку на desktop */
+    flex: 0 0 50%; /* 50% ширины */
+    height: 100%; /* Растягиваем по высоте секции */
+    min-width: 715px; /* Минимальная ширина */
+    object-fit: cover; /* Картинка заполняет блок */
+    object-position: center 90%; /* Смещаем вниз композицию */
+    margin-left: -55px; /* Сдвигаем картинку влево для лучшего кадрирования */
+  }
+
+  .innovation-text-all {
+    flex: 1 1 50%; /* Вторая половина секции — текст */
+    display: flex; /* Включаем flex */
+    flex-direction: column; /* Элементы в колонку */
+    justify-content: center; /* Центруем по вертикали */
+    padding-top: 147px; /* Отступ сверху */
+    padding-bottom: 150px; /* Отступ снизу */
+  }
+
+  .innovation-text {
+    font-size: 20px; /* Крупнее текст */
+    margin-bottom: 67px; /* Отступ перед кнопками */
+  }
+
+  .innovation-buttons {
+    position: static; /* Возвращаем естественное положение кнопок */
+    flex-direction: row; /* Кнопки снова в строке */
+    align-items: stretch; /* Растягиваем по высоте контейнера */
+    margin-bottom: 0; /* Убираем мобильные отступы */
+    top: auto; /* Сброс */
+    right: auto; /* Сброс */
+    justify-content: start; /* Кнопки слева */
+    display: flex; /* Flex */
+    gap: 15px; /* Интервал между кнопками */
+  }
+}

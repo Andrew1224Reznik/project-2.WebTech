@@ -1,0 +1,72 @@
+.gallery {
+  display: flex; /* Делаем галерею флекс-контейнером */
+  background-color: #f8f8f9; /* Светлый фон секции */
+}
+
+.gallery-container {
+  width: 420px; /* Фиксированная ширина контейнера */
+  padding-left: 10px; /* Отступ слева */
+  padding-right: 10px; /* Отступ справа */
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+}
+
+.gallery-list {
+  display: flex; /* Контейнер изображений — флекс-блок */
+  flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
+  gap: 5px; /* Расстояние между элементами */
+}
+
+.gallery-item {
+  flex: 1 1 calc(50% - 5px); /* Каждый элемент занимает 50% ширины минус gap */
+  display: block; /* Поведение блока */
+}
+
+.gallery-img {
+  display: block; /* Убирает лишние пробелы вокруг inline изображений */
+  transition: transform 0.3s ease; /* Плавная анимация увеличения */
+}
+
+.gallery-img:hover {
+  transform: scale(1.1); /* Увеличение при наведении */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Тень при ховере */
+}
+
+/* === Планшеты === */
+@media screen and (min-width: 768px) {
+  .gallery-container {
+    min-width: 768px; /* Минимальная ширина контейнера на планшетах */
+  }
+
+  .gallery {
+    justify-content: center; /* Центрируем галерею */
+    margin: 0 auto; /* Доп. центрирование */
+  }
+
+  .gallery-list {
+    flex-wrap: nowrap; /* Убираем перенос — все элементы в одну линию */
+    gap: 0px; /* Убираем расстояние между изображениями */
+  }
+}
+
+/* === Декстопы === */
+
+@media screen and (min-width: 1200px) {
+  .gallery {
+    max-width: 1440px; /* Ограничиваем максимальную ширину секции */
+  }
+
+  .gallery-container {
+    width: 100%; /* Контейнер занимает всю доступную ширину */
+  }
+
+  .gallery-list {
+    /* Исправлено: раньше было .gallery-lisr */
+    display: grid; /* Меняем флекс на грид */
+    grid-template-columns: repeat(4, 1fr); /* 4 равных столбца */
+  }
+
+  .gallery-img {
+    width: 100%; /* Картинка занимает весь размер своей ячейки */
+    height: auto; /* Сохраняет пропорции */
+  }
+}

@@ -1,0 +1,206 @@
+.our-news {
+  background-color: #f8f8f9; /* Фон секции */
+  padding-top: 70px; /* Отступ сверху */
+  padding-bottom: 70px; /* Отступ снизу */
+}
+
+.our-news-header {
+  display: flex; /* Включаем flex для выравнивания */
+  justify-content: center; /* Центруем элементы по горизонтали */
+  gap: 28px; /* Расстояние между элементами */
+  margin-bottom: 70px; /* Отступ снизу от заголовка */
+}
+
+.our-news-line {
+  width: 3px; /* Толщина вертикальной линии */
+  height: 50px; /* Высота линии */
+  background: #377dff; /* Цвет линии */
+}
+
+.our-news-title {
+  font-family: var(--second-family); /* Второй шрифт */
+  font-weight: 600; /* Толщина текста */
+  font-size: 35px; /* Размер текста */
+  line-height: 121%; /* Межстрочный интервал */
+  letter-spacing: 0.03em; /* Межбуквенный интервал */
+  text-align: center; /* Выравнивание текста */
+  color: #141d28; /* Цвет текста */
+}
+
+.span-our-news {
+  font-family: var(--second-family); /* Второй шрифт */
+  font-weight: 600; /* Толщина текста */
+  font-size: 35px; /* Размер шрифта */
+  line-height: 115%; /* Межстрочный интервал */
+  letter-spacing: 0.03em; /* Межбуквенный интервал */
+  text-align: center; /* Центровка текста */
+  color: #377dff; /* Выделение цветом */
+}
+
+.our-news-all {
+  display: flex; /* Включаем flex */
+  flex-direction: column; /* Строим элементы в столбец */
+  gap: 30px; /* Расстояние между блоками */
+}
+
+.first-new-text-all {
+  padding-top: 20px; /* Отступ сверху */
+  padding-left: 20px; /* Слева */
+  padding-bottom: 20px; /* Снизу */
+}
+
+.first-new-title {
+  font-family: var(--second-family); /* Шрифт заголовка */
+  font-weight: 400; /* Толщина текста */
+  font-size: 17px; /* Размер */
+  line-height: 135%; /* Межстрочный интервал */
+  letter-spacing: 0.06em; /* Межбуквенный интервал */
+  color: #141d28; /* Цвет */
+  margin-bottom: 10px; /* Отступ снизу */
+}
+
+.first-new-date {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400; /* Толщина */
+  font-size: 15px; /* Размер */
+  line-height: 200%; /* Межстрочный */
+  text-transform: capitalize; /* Делаем заглавную первую букву */
+  color: #5c6f87; /* Цвет */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+.new-date-date {
+  margin-left: 49px; /* Сдвиг второй даты вправо */
+}
+
+.first-new-button {
+  font-family: var(--font-family); /* Шрифт */
+  font-weight: 400; /* Толщина */
+  font-size: 12px; /* Размер */
+  line-height: 250%; /* Межстрочный */
+  letter-spacing: 0.33em; /* Большой интервал между буквами */
+  text-transform: uppercase; /* Верхний регистр */
+  color: #141d28; /* Цвет */
+}
+
+.first-new-comments {
+  display: none; /* Прячем блок на мобильной версии */
+}
+
+.new-title {
+  font-family: var(--second-family); /* Шрифт заголовка */
+  font-weight: 400; 
+  font-size: 18px;
+  line-height: 128%;
+  letter-spacing: 0.06em;
+  color: #fff; /* Белый текст */
+  margin-bottom: 10px;
+  width: 300px; /* Ограничиваем ширину */
+}
+
+.new-date {
+  display: flex; /* Ставим дату в строку */
+  gap: 49px; /* Расстояние между датой и комментариями */
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 200%;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.new-all-another {
+  overflow: hidden; /* Скрываем всё, что выходит за пределы */
+  width: 100%; /* Ширина блока */
+  margin-bottom: 50px; /* Отступ снизу */
+}
+
+.second-new-img {
+  width: 100%; /* Картинка адаптивная */
+  height: auto; /* Сохраняем пропорции */
+  display: block; /* Убираем пробелы */
+}
+
+.third-new-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.new-all-another:hover .new-bar {
+  max-height: fit-content; /* Раскрываем скрытую панель */
+  padding: 30px; /* Добавляем внутренние отступы при ховере */
+}
+
+.new-bar {
+  background: #141d28; /* Тёмный фон */
+  max-height: 0; /* Скрыто по умолчанию */
+  overflow: hidden; /* Обрезаем содержимое */
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Анимации */
+}
+
+/* ======= TABLET VERSION ======= */
+@media screen and (min-width: 768px) {
+  .first-new-comments {
+    display: block; /* Показываем комментарии */
+    width: 612px; /* Ширина блока текста */
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    color: #5c6f87;
+    margin-bottom: 57px;
+  }
+
+  .news-another {
+    display: flex; /* Расставляем карточки в строку */
+    gap: 30px; /* Расстояние между карточками */
+  }
+
+  .new-all-another {
+    width: 370px; /* Ширина карточек на планшете */
+  }
+}
+
+/* ======= DESKTOP VERSION ======= */
+@media screen and (min-width: 1200px) {
+  .our-news {
+    background-color: #f8f8f9;
+    padding-top: 150px; /* Больше отступ сверху */
+    padding-bottom: 150px; /* Больше снизу */
+  }
+
+  .our-news-header {
+    gap: 38px; /* Увеличиваем расстояние */
+  }
+
+  .our-news-line {
+    height: 54px; /* Линия выше */
+  }
+
+  .our-news-title {
+    font-size: 38px; /* Чуть больше шрифт */
+  }
+
+  .span-our-news {
+    font-size: 38px;
+  }
+
+  .our-news-all {
+    flex-direction: row; /* Располагаем блоки рядом */
+  }
+
+  .first-new-text-all {
+    padding-top: 75px; /* Увеличиваем отступ сверху */
+    padding-left: 65px; /* Увеличиваем слева */
+    padding-bottom: 0px; /* Убираем нижний отступ */
+  }
+
+  .new-all-another {
+    margin-bottom: 150px; /* Большой отступ снизу */
+  }
+
+  .news-another {
+    display: block; /* Снова блоковое отображение */
+  }
+}
