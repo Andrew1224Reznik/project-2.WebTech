@@ -9,3 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 import './js/testimonials.js';
+import './js/openBackdrop.js';
+import './js/smoothScroll.js';
+import './js/openMobMenu.js';

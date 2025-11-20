@@ -1,0 +1,198 @@
+.backdrop {
+  width: 100%; /* Растягивает задний фон на всю ширину экрана */
+  height: 100%; /* И на всю высоту */
+  background-color: #f6f6f6; /* Светлый фон под модалкой */
+  position: fixed; /* Фиксированное положение — независимо от прокрутки */
+  top: 0; /* Прижимаем к верхнему краю */
+  z-index: 1; /* Слой над контентом */
+  opacity: 0; /* Изначально прозрачный */
+  transform: translateX(-100%); /* Скрыт за левым краем экрана */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Анимация появления */
+}
+
+.backdrop-open {
+  opacity: 1; /* Делаем видимым */
+  transform: translateX(0); /* Сдвигаем на экран */
+}
+
+.modal {
+  position: relative; /* Нужен для абсолютного позиционирования кнопки закрытия */
+  width: 100%; /* Модалка занимает всю ширину (на мобилке) */
+  height: 100%; /* И всю высоту */
+  background-color: #f6f6f6; /* Цвет модального окна */
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); /* Тень */
+  opacity: 0.9; /* Лёгкая прозрачность */
+  display: flex; /* Контент внутри модалки — флекс */
+  flex-direction: column; /* В колонку */
+  justify-content: space-between; /* Раздвигаем элементы */
+  padding-top: 30px; /* Внутренние отступы */
+  padding-bottom: 30px;
+}
+
+.backdrop-close {
+  position: absolute; /* Иконка закрытия поверх контента */
+  background: none; /* Без фона */
+  border: none; /* Без рамки */
+  cursor: pointer; /* Курсор — рука */
+  right: 30px; /* Сдвигаем вправо */
+}
+
+.modal-header {
+  margin-left: 20px; /* Отступ слева */
+  margin-bottom: 25px; /* Отступ снизу */
+}
+
+.modal-input {
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #141d28; /* Тёмный текст */
+  border: 2px solid #377dff; /* Голубая рамка */
+  border-radius: 35px; /* Скругление */
+  width: 100%; /* Ширина на 100% контейнера */
+  height: 60px; /* Высота поля */
+  padding-left: 60px; /* Для иконки внутри */
+  margin-bottom: 15px; /* Отступ снизу */
+}
+
+.modal-button {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #141d28;
+  background-color: #fff;
+  padding: 17px 37px; /* Внутренние отступы */
+  border: 2px solid #377dff; /* Голубая рамка */
+  border-radius: 35px; /* Скругление */
+  transition: transform 500ms ease; /* Анимация наведения */
+  cursor: pointer;
+  margin: 12px auto 32px auto; /* Центр по горизонтали */
+}
+
+.modal-button:hover {
+  background-color: #377dff; /* Становится голубой */
+  color: #fff; /* Текст белый */
+  transform: scale(1.1); /* Увеличение */
+}
+
+.modal-wrap {
+  position: relative; /* Для позиционирования иконок */
+}
+
+.icon-modal {
+  position: absolute; /* Иконка внутри инпута */
+  top: 20px; /* Позиция по вертикали */
+  left: 25px; /* Позиция слева */
+}
+
+.modal-textarea {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #141d28;
+  border: 2px solid #377dff;
+  border-radius: 35px;
+  width: 100%;
+  height: 60px;
+  padding-left: 15px; /* Отступы внутри textarea */
+  padding-top: 10px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+
+.modal-check-text {
+  margin-left: 10px; /* Отступ от чекбокса */
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 155%;
+  text-align: center;
+  color: #4e5e72;
+  cursor: pointer;
+}
+
+.modal-check-text a {
+  color: #377dff; /* Синяя ссылка */
+}
+
+.modal-check-icon {
+  margin-right: 15px; /* Отступ от текста */
+}
+
+.modal-check:checked + .modal-check-text {
+  fill: #377dff; /* Меняем цвет иконки (если SVG inline) */
+}
+
+/* === Планшет === */
+@media screen and (min-width: 768px) {
+  .modal-wrap {
+    width: 400px; /* Ограничиваем ширину */
+    margin-left: 20px;
+  }
+
+  /* Последний modal-wrap на планшете без ограничения 400px */
+  .modal-wrap:last-of-type {
+    width: 100%; /* Занимает всю ширину */
+  }
+
+  .modal-textarea {
+    width: 400px; /* Тоже ограничиваем */
+    margin-left: 20px;
+  }
+}
+
+/* === Декстоп === */
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    background-color: rgba(17, 17, 17, 0.3); /* Тёмное размытие заднего фона */
+    visibility: hidden; /* По умолчанию скрыт */
+    pointer-events: none; /* Не кликабелен */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Анимация */
+  }
+
+  .backdrop-open {
+    opacity: 1; /* Видимый */
+    visibility: visible; /* Видимый */
+    pointer-events: all; /* Кликабельный */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  .modal {
+    width: 500px; /* Ограничиваем ширину модалки */
+    height: 540px; /* Фиксированная высота */
+    border-radius: 3%; /* Скругление */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Глубокая тень */
+    top: 50%; /* Центрируем */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центр */
+    padding: 15px; /* Равномерные отступы */
+  }
+
+  .backdrop-close {
+    top: 30px; /* Выше кнопка закрытия */
+  }
+
+  .modal-button {
+    margin: 12px 0 32px 0; /* Убираем auto для десктопа */
+  }
+
+  .modal-wrap {
+    width: 100%; /* На десктопе элементы на всю ширину */
+    margin-left: 0;
+  }
+
+  .modal-textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Класс для запрета прокрутки при открытой модалке */
+.noscroll {
+  overflow: hidden; /* Отключаем скролл */
+  height: 100%; /* Фиксируем высоту */
+}

@@ -1,0 +1,137 @@
+.footer {
+  background: #141d28; /* Тёмный фон футера */
+  padding-top: 70px; /* Отступ сверху */
+  padding-bottom: 70px; /* Отступ снизу */
+  padding-left: 30px; /* Внутренний отступ слева для мобильной версии */
+}
+
+.footer-column {
+  display: flex; /* Включаем flex-контейнер */
+  flex-direction: column; /* Выстраиваем блоки друг под другом */
+  gap: 70px; /* Расстояние между колонками */
+}
+
+.footer-title {
+  font-family: var(--second-family); /* Второй шрифт */
+  font-weight: 400; /* Толщина шрифта */
+  font-size: 12px; /* Маленький размер шрифта */
+  line-height: 90%; /* Межстрочный интервал */
+  letter-spacing: 0.4em; /* Большое расстояние между буквами */
+  text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+  color: #377dff; /* Голубой цвет заголовка */
+  margin-bottom: 35px; /* Отступ снизу от заголовка */
+}
+
+.about-us-text {
+  width: 370px; /* Ограничение ширины текста */
+  font-family: var(--font-family); /* Основной шрифт */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187%; /* Большой межстрочный интервал для читаемости */
+  color: #fff; /* Белый цвет текста */
+  margin-bottom: 35px; /* Отступ снизу */
+}
+
+.footer-soc-list {
+  display: flex; /* Список соцсетей в строку */
+  gap: 16px; /* Расстояние между иконками */
+}
+
+.recent-post-svg-text {
+  display: flex; /* Иконка + текст в строку */
+  gap: 6px; /* Расстояние между svg и текстом */
+  align-items: center; /* Центровка по вертикали */
+}
+
+.recent-post-text-1 {
+  width: 270px; /* Ограничиваем ширину текста */
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 200%; /* Увеличенный межстрочный */
+  color: #fff;
+}
+
+.recent-post-text-2 {
+  width: 270px; /* Ограничиваем ширину */
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 200%;
+  color: #fff;
+  margin-left: 9px; /* Сдвиг второго текста под SVG */
+}
+
+.footer-line {
+  width: 330px; /* Длина линии */
+  height: 1px; /* Толщина линии */
+  background: #343d48; /* Цвет линии */
+  margin-top: 12px; /* Отступ сверху */
+  margin-bottom: 12px; /* Отступ снизу */
+}
+
+.contact-us-svg-text {
+  display: flex; /* Иконка + текст в строку */
+  gap: 6px; /* Расстояние */
+  align-items: center; /* Выравнивание по центру */
+}
+
+.contact-us-text-1 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187%;
+  color: #fff; /* Белый текст */
+}
+
+.contact-us-text-2 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187%;
+  color: #fff;
+  margin-left: 26px; /* Отступ слева */
+  margin-bottom: 13px; /* Отступ снизу */
+}
+
+/* === Планшет === */
+@media screen and (min-width: 768px) {
+  .footer-column {
+    display: flex; /* Оставляем flex */
+    flex-direction: row; /* Теперь ставим колонки в одну строку */
+    gap: 70px; /* Расстояние между колонками */
+  }
+
+  .recent-post {
+    display: none; /* Прячем блок Recent Posts на планшетах */
+  }
+}
+
+/* === Декстоп === */
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 100px; /* Более крупные отступы */
+    padding-bottom: 100px;
+    padding-left: 0px; /* Убираем левый отступ на больших экранах */
+  }
+
+  .footer-column {
+    gap: 100px; /* Увеличиваем расстояние между колонками */
+  }
+
+  .about-us-text {
+    margin-bottom: 40px; /* Чуть больше отступ на десктопе */
+  }
+
+  .footer-title {
+    margin-bottom: 55px; /* Больше расстояние под заголовком */
+  }
+
+  .recent-post {
+    display: block; /* Возвращаем блок Recent Posts на десктопе */
+  }
+
+  .footer-line {
+    width: 370px; /* Длиннее линия */
+  }
+}
